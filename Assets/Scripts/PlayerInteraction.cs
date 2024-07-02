@@ -41,20 +41,20 @@ public class PlayerInteraction : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("NPC"))
+        if (collision.CompareTag("NPC") || collision.CompareTag("Sign"))
         {
-            Debug.Log("NPC entered..."); // 디버그 로그 추가
+            Debug.Log("Interactable entered..."); // 디버그 로그 추가
             currentNPC = collision.gameObject; // 현재 상호작용 중인 NPC를 설정합니다.
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.CompareTag("NPC"))
+        if (collision.CompareTag("NPC") || collision.CompareTag("Sign"))
         {
             if (currentNPC == collision.gameObject)
             {
-                Debug.Log("NPC exited..."); // 디버그 로그 추가
+                Debug.Log("Interactable exited..."); // 디버그 로그 추가
                 currentNPC = null; // NPC와의 상호작용이 끝나면 초기화합니다.
                 isInteracting = false; // 대화 중 상태를 해제합니다.
             }

@@ -6,6 +6,8 @@ TagManager:
   tags:
   - NPC
   - Obstacle
+  - New tag
+  - Sign
   layers:
   - Default
   - TransparentFX
@@ -13,8 +15,8 @@ TagManager:
   - 1
   - Water
   - UI
-  - 
-  - 
+  - 1-0.player_stand_0
+  - 2.Mother_0
   - 
   - 
   - 
