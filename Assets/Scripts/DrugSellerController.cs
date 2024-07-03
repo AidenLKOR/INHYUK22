@@ -2,13 +2,13 @@ using UnityEngine;
 
 public class DrugSellerController : MonoBehaviour
 {
-    public Transform player; // ÁÖÀÎ°ø Ä³¸¯ÅÍ
-    public float speed = 3f; // ÀÌµ¿ ¼Óµµ
-    public float stopDistance = 1f; // ¸ØÃß´Â °Å¸®
-    private bool isChasing = false; // ÃßÀû ¿©ºÎ
-    private PlayerController playerController; // ÁÖÀÎ°ø Ä³¸¯ÅÍÀÇ ÄÁÆ®·Ñ·¯
-    [SerializeField] private DialogueManager dialogueManager; // ´ëÈ­ ¸Å´ÏÀú
-    public string[] dialogueLines; // ´ëÈ­ ³»¿ë
+    public Transform player; // ï¿½ï¿½ï¿½Î°ï¿½ Ä³ï¿½ï¿½ï¿½ï¿½
+    public float speed = 3f; // ï¿½Ìµï¿½ ï¿½Óµï¿½
+    public float stopDistance = 1f; // ï¿½ï¿½ï¿½ß´ï¿½ ï¿½Å¸ï¿½
+    public bool isChasing = false; // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+    public PlayerController playerController; // ï¿½ï¿½ï¿½Î°ï¿½ Ä³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Æ®ï¿½Ñ·ï¿½
+    [SerializeField] public DialogueManager dialogueManager; // ï¿½ï¿½È­ ï¿½Å´ï¿½ï¿½ï¿½
+    public string[] dialogueLines; // ï¿½ï¿½È­ ï¿½ï¿½ï¿½ï¿½
 
     void Start()
     {
@@ -23,21 +23,21 @@ public class DrugSellerController : MonoBehaviour
     {
         if (isChasing)
         {
-            // ÁÖÀÎ°ø Ä³¸¯ÅÍ¿ÍÀÇ °Å¸® °è»ê
+            // ï¿½ï¿½ï¿½Î°ï¿½ Ä³ï¿½ï¿½ï¿½Í¿ï¿½ï¿½ï¿½ ï¿½Å¸ï¿½ ï¿½ï¿½ï¿½
             float distance = Vector3.Distance(transform.position, player.position);
             if (distance > stopDistance)
             {
-                // ÁÖÀÎ°ø Ä³¸¯ÅÍ¸¦ ÇâÇØ ÀÌµ¿
+                // ï¿½ï¿½ï¿½Î°ï¿½ Ä³ï¿½ï¿½ï¿½Í¸ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ìµï¿½
                 Vector3 direction = (player.position - transform.position).normalized;
                 transform.position += direction * speed * Time.deltaTime;
             }
             else
             {
-                // ¸ØÃß±â
+                // ï¿½ï¿½ï¿½ß±ï¿½
                 Debug.Log("DrugSeller reached the player and stopped.");
                 isChasing = false;
-                playerController.StopMoving(); // ÁÖÀÎ°ø ¸ØÃß±â
-                StartDialogue(); // ´ëÈ­ ½ÃÀÛ
+                playerController.StopMoving(); // ï¿½ï¿½ï¿½Î°ï¿½ ï¿½ï¿½ï¿½ß±ï¿½
+                StartDialogue(); // ï¿½ï¿½È­ ï¿½ï¿½ï¿½ï¿½
             }
         }
     }
@@ -46,20 +46,28 @@ public class DrugSellerController : MonoBehaviour
     {
         Debug.Log("StartChase called...");
         isChasing = true;
-        playerController.StopMoving(); // ÁÖÀÎ°ø ¸ØÃß±â
+        playerController.StopMoving(); // ï¿½ï¿½ï¿½Î°ï¿½ ï¿½ï¿½ï¿½ß±ï¿½
     }
 
     private void StartDialogue()
     {
+        Debug.Log("Starting dialogue with the player...");
+        
+        // ì˜ˆì‹œë¡œ ì‚¬ìš©í•  ëŒ€ì‚¬ë“¤
+        string[] lines = new string[]
+        {
+            "ì´ê³³ì— ì²˜ìŒ ì™”êµ¬ë‚˜?",
+            "ë°˜ê°‘ë‹¤. ì—¬ê¸°ëŠ” ì •ë§ ë©‹ì§„ ê³³ì´ì•¼.",
+            "ì—¬ê¸°ì„œ ë§ì€ ê²ƒì„ ë°°ìš¸ ìˆ˜ ìˆì„ ê±°ì•¼."
+        };
+
         if (dialogueManager != null)
         {
-            // ´ëÈ­ ½ÃÀÛ
-            Debug.Log("Starting dialogue with the player...");
-            dialogueManager.StartDialogue(dialogueLines);
+            dialogueManager.StartDialogue(lines);
         }
         else
         {
-            Debug.LogError("DialogueManager is not set.");
+            Debug.LogError("DialogueManager is null");
         }
     }
 }
