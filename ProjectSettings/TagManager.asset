@@ -8,6 +8,7 @@ TagManager:
   - Obstacle
   - New tag
   - Sign
+  - Interactable
   layers:
   - Default
   - TransparentFX

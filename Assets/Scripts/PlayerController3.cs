@@ -27,6 +27,15 @@ public class PlayerController3 : MonoBehaviour
             }
 
             moveInput = new Vector2(moveHorizontal, moveVertical).normalized;
+
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                SignDialogue3 signDialogue = FindObjectOfType<SignDialogue3>();
+                if (signDialogue != null && signDialogue.enabled)
+                {
+                    signDialogue.TriggerDialogue();
+                }
+            }
         }
         else
         {
