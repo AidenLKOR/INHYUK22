@@ -6,7 +6,7 @@ public class MenuController : MonoBehaviour
     public void StartGame()
     {
         // 게임 씬 로드 (예: "GameScene")
-        SceneManager.LoadScene("GameScene");
+        SceneManager.LoadScene("#1.HomeScene");
     }
 
     public void ShowCredits()

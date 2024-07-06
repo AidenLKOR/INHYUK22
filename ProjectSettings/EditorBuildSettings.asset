@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CreditsScene.unity
     guid: af900f968922e4a40b30cbd6d1cadbc7
+  - enabled: 1
+    path: Assets/Scenes/#4.DrugSellerHouse.unity
+    guid: 3c2cea014a75b154784797d3b8a21022
   m_configObjects: {}
