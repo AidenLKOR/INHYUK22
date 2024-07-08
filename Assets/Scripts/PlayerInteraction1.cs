@@ -27,6 +27,10 @@ public class PlayerInteraction : MonoBehaviour
             npcDialogue.StartDialogue(); // NPC와의 대화를 시작합니다.
             isInteracting = true; // 대화 중 상태로 설정합니다.
         }
+        else
+        {
+            Debug.LogWarning("NPCDialogue component is null!");
+        }
     }
 
     private void ContinueNPCDialogue()
@@ -36,6 +40,10 @@ public class PlayerInteraction : MonoBehaviour
         {
             Debug.Log("Continuing NPC dialogue..."); // 디버그 로그 추가
             npcDialogue.ShowNextLine(); // 다음 대사를 표시합니다.
+        }
+        else
+        {
+            Debug.LogWarning("NPCDialogue component is null or not interacting!");
         }
     }
 

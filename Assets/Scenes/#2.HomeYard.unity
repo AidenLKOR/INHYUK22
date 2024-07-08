@@ -2211,8 +2211,8 @@ Transform:
   m_GameObject: {fileID: 834510303}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: -0.0273, z: 0}
+  m_LocalScale: {x: 1, y: 1.0055, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1823111230}
@@ -4255,7 +4255,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueLines:
-  - "\uC815\uACA8\uC6B4 \uB098\uC758 \uC9D1"
+  - "\uD589\uBCF5\uD55C \uC6B0\uB9AC\uC9D1"
 --- !u!1 &1045518388
 GameObject:
   m_ObjectHideFlags: 0
@@ -4610,10 +4610,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 4c14978122a427e48bace6fc6af98b0c, type: 2}
+  m_sharedMaterial: {fileID: -213358844467566827, guid: 4c14978122a427e48bace6fc6af98b0c, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4710,7 +4710,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -4752,8 +4752,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.11875, y: 0.13356394}
   m_AnchorMax: {x: 0.7874999, y: 0.66387224}
-  m_AnchoredPosition: {x: 76.29999, y: 51.300003}
-  m_SizeDelta: {x: 265, y: 183}
+  m_AnchoredPosition: {x: 37.5, y: -123.72}
+  m_SizeDelta: {x: 204.5876, y: -247.4379}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1411969059
 GameObject:
