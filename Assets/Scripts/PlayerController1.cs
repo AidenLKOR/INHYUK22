@@ -1,54 +1,37 @@
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public class PlayerMovement : MonoBehaviour
 {
-    public float speed = 5.0f;
+    public float moveSpeed = 5f; // 플레이어 이동 속도
+
     private Rigidbody2D rb;
-    private Vector2 moveInput;
-    private bool canMove = true; // 움직일 수 있는지 여부를 나타내는 변수
+    private Vector2 moveDirection;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        rb.gravityScale = 0; // 중력 무시
-        rb.constraints = RigidbodyConstraints2D.FreezeRotation; // 회전 고정
     }
 
     void Update()
     {
-        if (canMove)
-        {
-            // 이동 입력 값 가져오기
-            float moveHorizontal = Input.GetAxis("Horizontal");
-            float moveVertical = Input.GetAxis("Vertical");
-
-            // 대각선 이동 방지
-            if (moveHorizontal != 0)
-            {
-                moveVertical = 0;
-            }
-
-            moveInput = new Vector2(moveHorizontal, moveVertical).normalized;
-        }
-        else
-        {
-            moveInput = Vector2.zero;
-        }
+        ProcessInputs();
     }
 
     void FixedUpdate()
     {
-        Vector2 targetPosition = rb.position + moveInput * speed * Time.fixedDeltaTime;
-        rb.MovePosition(targetPosition);
+        Move();
     }
 
-    public void StopMoving()
+    void ProcessInputs()
     {
-        canMove = false;
+        float moveX = Input.GetAxis("Horizontal");
+        float moveY = Input.GetAxis("Vertical");
+
+        moveDirection = new Vector2(moveX, moveY).normalized;
     }
 
-    public void StartMoving()
+    void Move()
     {
-        canMove = true;
+        rb.velocity = new Vector2(moveDirection.x * moveSpeed, moveDirection.y * moveSpeed);
     }
 }
