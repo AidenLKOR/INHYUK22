@@ -1108,7 +1108,7 @@ MonoBehaviour:
   - x
   - "\uBC25 \uBA39\uACE0 \uD559\uAD50 \uAC00\uC57C\uC9C0"
   - x
-  - "\uC544\uCC38! \uC9D1\uC5D0 \uC62C \uB54C \uC2EC\uBD80\uB984 \uC78A\uC9C0 \uB9C8\uB834~"
+  - "\uC9D1\uC5D0 \uC62C \uB54C \uC2EC\uBD80\uB984 \uC78A\uC9C0 \uB9C8\uB834~"
 --- !u!50 &437878586
 Rigidbody2D:
   serializedVersion: 4
@@ -2960,7 +2960,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -137.5, y: 168.64}
+  m_AnchoredPosition: {x: -110.8, y: 187}
   m_SizeDelta: {x: 261.8535, y: 217.24}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1030254888
@@ -2983,7 +2983,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -791206814, guid: 882885b615b78f84993bdcc62fd411e7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9377e9ad1bad7474f85d034011e4e28b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
