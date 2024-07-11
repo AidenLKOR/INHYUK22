@@ -1,5 +1,4 @@
 using UnityEngine;
-using TMPro;
 
 public class PlayerInteraction : MonoBehaviour
 {
@@ -42,22 +41,28 @@ public class PlayerInteraction : MonoBehaviour
 
     private void StartNPCDialogue()
     {
-        NPCDialogue npcDialogue = currentNPC.GetComponent<NPCDialogue>();
-        if (npcDialogue != null)
+        if (currentNPC != null)
         {
-            Debug.Log("Starting NPC dialogue..."); // 디버그 로그 추가
-            npcDialogue.StartDialogue(); // NPC와의 대화를 시작합니다.
-            isInteracting = true; // 대화 중 상태로 설정합니다.
+            NPCDialogue npcDialogue = currentNPC.GetComponent<NPCDialogue>();
+            if (npcDialogue != null)
+            {
+                Debug.Log("Starting NPC dialogue..."); // 디버그 로그 추가
+                npcDialogue.StartDialogue(); // NPC와의 대화를 시작합니다.
+                isInteracting = true; // 대화 중 상태로 설정합니다.
+            }
         }
     }
 
     private void ContinueNPCDialogue()
     {
-        NPCDialogue npcDialogue = currentNPC.GetComponent<NPCDialogue>();
-        if (npcDialogue != null)
+        if (currentNPC != null)
         {
-            Debug.Log("Continuing NPC dialogue..."); // 디버그 로그 추가
-            npcDialogue.ShowNextLine(); // 다음 대사를 표시합니다.
+            NPCDialogue npcDialogue = currentNPC.GetComponent<NPCDialogue>();
+            if (npcDialogue != null)
+            {
+                Debug.Log("Continuing NPC dialogue..."); // 디버그 로그 추가
+                npcDialogue.ShowNextLine(); // 다음 대사를 표시합니다.
+            }
         }
     }
 
@@ -91,16 +96,13 @@ public class PlayerInteraction : MonoBehaviour
             if (currentInteractableObject == collision.gameObject)
             {
                 Debug.Log("Interactable object exited..."); // 디버그 로그 추가
-                currentInteractableObject = null; // 오브젝트와의 상호작용이 끝나면 초기화합니다.
-                if (isInteracting)
+                InteractableObject interactable = currentInteractableObject.GetComponent<InteractableObject>();
+                if (interactable != null)
                 {
-                    InteractableObject interactable = collision.GetComponent<InteractableObject>();
-                    if (interactable != null)
-                    {
-                        interactable.HideMessage(); // 메시지를 숨깁니다.
-                    }
-                    isInteracting = false; // 상호작용 상태를 해제합니다.
+                    interactable.HideMessage(); // 메시지를 숨깁니다.
                 }
+                currentInteractableObject = null; // 오브젝트와의 상호작용이 끝나면 초기화합니다.
+                isInteracting = false; // 상호작용 상태를 해제합니다.
             }
         }
     }

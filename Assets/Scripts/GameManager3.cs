@@ -12,6 +12,7 @@ public class GameManager3 : MonoBehaviour
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
+            SceneManager.sceneLoaded += OnSceneLoaded; // 씬이 로드될 때 호출될 메서드 등록
         }
         else
         {
@@ -29,7 +30,7 @@ public class GameManager3 : MonoBehaviour
         return playerStartPosition;
     }
 
-    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         GameObject player = GameObject.FindWithTag("Player");
         if (player != null)
