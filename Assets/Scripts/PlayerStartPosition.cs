@@ -7,7 +7,7 @@ public class PlayerStartPosition : MonoBehaviour
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         if (player != null)
         {
-            player.transform.position = GameManager.Instance.GetPlayerStartPosition();
+            player.transform.position = GameManager1.Instance.GetPlayerStartPosition();
         }
     }
 }

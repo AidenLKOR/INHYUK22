@@ -10,7 +10,6 @@ public class SceneSwitcher3 : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            // GameManager3.Instance가 null인지 확인
             if (GameManager3.Instance != null)
             {
                 GameManager3.Instance.SetPlayerStartPosition(playerStartPosition);
