@@ -1,15 +1,14 @@
 using UnityEngine;
-using TMPro;
+using TMPro; // 추가한 부분
 
 public class InteractableObject : MonoBehaviour
 {
-    public string message; // 표시할 메시지
-    public GameObject messageBox; // 메시지 박스
-    public TextMeshProUGUI messageText; // 메시지 텍스트
+    public string message;
+    public GameObject messageBox;
+    public TextMeshProUGUI messageText;
 
     void Start()
     {
-        // Start 시점에 메시지 박스를 숨깁니다.
         HideMessage();
     }
 
@@ -18,7 +17,7 @@ public class InteractableObject : MonoBehaviour
         if (messageBox != null && messageText != null)
         {
             messageText.text = message;
-            messageBox.SetActive(true); // 메시지 박스를 활성화합니다.
+            messageBox.SetActive(true);
         }
         else
         {
@@ -30,11 +29,15 @@ public class InteractableObject : MonoBehaviour
     {
         if (messageBox != null)
         {
-            messageBox.SetActive(false); // 메시지 박스를 비활성화합니다.
+            messageBox.SetActive(false);
         }
-        else
+    }
+
+    public void TriggerMiniGame()
+    {
+        if (MiniGameManager.Instance != null)
         {
-            Debug.LogWarning("Trying to access destroyed object in HideMessage method.");
+            MiniGameManager.Instance.StartMiniGame();
         }
     }
 }

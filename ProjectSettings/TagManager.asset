@@ -9,6 +9,7 @@ TagManager:
   - New tag
   - Sign
   - Interactable
+  - Desk
   layers:
   - Default
   - TransparentFX

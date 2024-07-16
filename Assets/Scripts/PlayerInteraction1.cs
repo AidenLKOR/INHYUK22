@@ -2,10 +2,10 @@ using UnityEngine;
 
 public class PlayerInteraction : MonoBehaviour
 {
-    public float interactionDistance = 2.0f; // 상호작용 거리
-    private GameObject currentNPC; // 현재 상호작용 중인 NPC
-    private GameObject currentInteractableObject; // 현재 상호작용 중인 오브젝트
-    private bool isInteracting = false; // 대화 중 여부
+    public float interactionDistance = 2.0f;
+    private GameObject currentNPC;
+    private GameObject currentInteractableObject;
+    private bool isInteracting = false;
 
     void Update()
     {
@@ -13,11 +13,11 @@ public class PlayerInteraction : MonoBehaviour
         {
             if (isInteracting)
             {
-                ContinueNPCDialogue(); // NPC와의 대화를 진행합니다.
+                ContinueNPCDialogue();
             }
             else
             {
-                StartNPCDialogue(); // NPC와의 대화를 시작합니다.
+                StartNPCDialogue();
             }
         }
         else if (currentInteractableObject != null && Input.GetKeyDown(KeyCode.E))
@@ -27,13 +27,16 @@ public class PlayerInteraction : MonoBehaviour
             {
                 if (isInteracting)
                 {
-                    interactable.HideMessage(); // 메시지를 숨깁니다.
-                    isInteracting = false; // 상호작용 상태를 해제합니다.
+                    interactable.HideMessage();
+                    isInteracting = false;
                 }
                 else
                 {
-                    interactable.ShowMessage(); // 메시지를 표시합니다.
-                    isInteracting = true; // 상호작용 상태를 활성화합니다.
+                    interactable.ShowMessage();
+                    isInteracting = true;
+
+                    // 미니 게임 시작
+                    interactable.TriggerMiniGame();
                 }
             }
         }
@@ -41,28 +44,20 @@ public class PlayerInteraction : MonoBehaviour
 
     private void StartNPCDialogue()
     {
-        if (currentNPC != null)
+        NPCDialogue npcDialogue = currentNPC.GetComponent<NPCDialogue>();
+        if (npcDialogue != null)
         {
-            NPCDialogue npcDialogue = currentNPC.GetComponent<NPCDialogue>();
-            if (npcDialogue != null)
-            {
-                Debug.Log("Starting NPC dialogue..."); // 디버그 로그 추가
-                npcDialogue.StartDialogue(); // NPC와의 대화를 시작합니다.
-                isInteracting = true; // 대화 중 상태로 설정합니다.
-            }
+            npcDialogue.StartDialogue();
+            isInteracting = true;
         }
     }
 
     private void ContinueNPCDialogue()
     {
-        if (currentNPC != null)
+        NPCDialogue npcDialogue = currentNPC.GetComponent<NPCDialogue>();
+        if (npcDialogue != null)
         {
-            NPCDialogue npcDialogue = currentNPC.GetComponent<NPCDialogue>();
-            if (npcDialogue != null)
-            {
-                Debug.Log("Continuing NPC dialogue..."); // 디버그 로그 추가
-                npcDialogue.ShowNextLine(); // 다음 대사를 표시합니다.
-            }
+            npcDialogue.ShowNextLine();
         }
     }
 
@@ -70,13 +65,11 @@ public class PlayerInteraction : MonoBehaviour
     {
         if (collision.CompareTag("NPC"))
         {
-            Debug.Log("NPC entered..."); // 디버그 로그 추가
-            currentNPC = collision.gameObject; // 현재 상호작용 중인 NPC를 설정합니다.
+            currentNPC = collision.gameObject;
         }
         else if (collision.CompareTag("Interactable"))
         {
-            Debug.Log("Interactable object entered..."); // 디버그 로그 추가
-            currentInteractableObject = collision.gameObject; // 현재 상호작용 중인 오브젝트를 설정합니다.
+            currentInteractableObject = collision.gameObject;
         }
     }
 
@@ -86,23 +79,24 @@ public class PlayerInteraction : MonoBehaviour
         {
             if (currentNPC == collision.gameObject)
             {
-                Debug.Log("NPC exited..."); // 디버그 로그 추가
-                currentNPC = null; // NPC와의 상호작용이 끝나면 초기화합니다.
-                isInteracting = false; // 대화 중 상태를 해제합니다.
+                currentNPC = null;
+                isInteracting = false;
             }
         }
         else if (collision.CompareTag("Interactable"))
         {
             if (currentInteractableObject == collision.gameObject)
             {
-                Debug.Log("Interactable object exited..."); // 디버그 로그 추가
-                InteractableObject interactable = currentInteractableObject.GetComponent<InteractableObject>();
-                if (interactable != null)
+                currentInteractableObject = null;
+                if (isInteracting)
                 {
-                    interactable.HideMessage(); // 메시지를 숨깁니다.
+                    InteractableObject interactable = collision.GetComponent<InteractableObject>();
+                    if (interactable != null)
+                    {
+                        interactable.HideMessage();
+                    }
+                    isInteracting = false;
                 }
-                currentInteractableObject = null; // 오브젝트와의 상호작용이 끝나면 초기화합니다.
-                isInteracting = false; // 상호작용 상태를 해제합니다.
             }
         }
     }
