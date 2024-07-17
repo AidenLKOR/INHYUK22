@@ -22,7 +22,6 @@ public class PlayerInteraction : MonoBehaviour
                 else
                 {
                     interactable.ShowMessage(); // 메시지를 표시합니다.
-                    interactable.TriggerMiniGame(); // 미니게임을 트리거합니다.
                     isInteracting = true; // 상호작용 상태를 활성화합니다.
                 }
             }

@@ -13,6 +13,7 @@ public class GameManager1 : MonoBehaviour
             Instance = this;
             DontDestroyOnLoad(gameObject);
             SceneManager.sceneLoaded += OnSceneLoaded;
+            Debug.Log("GameManager1 initialized and sceneLoaded event added.");
         }
         else
         {
@@ -23,6 +24,7 @@ public class GameManager1 : MonoBehaviour
     public void SetPlayerStartPosition(Vector3 position)
     {
         playerStartPosition = position;
+        Debug.Log("Player start position set to: " + position);
     }
 
     public Vector3 GetPlayerStartPosition()
@@ -32,10 +34,16 @@ public class GameManager1 : MonoBehaviour
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+        Debug.Log("Scene loaded: " + scene.name);
         GameObject player = GameObject.FindWithTag("Player");
         if (player != null)
         {
+            Debug.Log("Setting player position to: " + playerStartPosition);
             player.transform.position = playerStartPosition;
+        }
+        else
+        {
+            Debug.LogError("Player not found in the scene: " + scene.name);
         }
     }
 }
