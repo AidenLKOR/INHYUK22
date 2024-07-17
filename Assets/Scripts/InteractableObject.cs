@@ -6,7 +6,6 @@ public class InteractableObject : MonoBehaviour
     public string message; // 표시할 메시지
     public GameObject messageBox; // 메시지 박스
     public TextMeshProUGUI messageText; // 메시지 텍스트
-    public MiniGameManager miniGameManager; // MiniGameManager 참조
 
     void Start()
     {
@@ -29,14 +28,11 @@ public class InteractableObject : MonoBehaviour
 
     public void HideMessage()
     {
-        messageBox.SetActive(false); // 메시지 박스를 비활성화합니다.
-    }
-
-    public void TriggerMiniGame()
-    {
-        if (miniGameManager != null)
+        if (messageBox != null)
         {
-            miniGameManager.StartMiniGame();
+            messageBox.SetActive(false); // 메시지 박스를 비활성화합니다.
         }
     }
+
+    // MiniGameManager에 대한 참조 및 관련 로직은 삭제합니다.
 }
