@@ -28,6 +28,12 @@ public class MiniGameManager : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        miniGameUI.SetActive(false);
+        player.SetActive(false);
+    }
+
     public void StartMiniGame()
     {
         miniGameUI.SetActive(true);

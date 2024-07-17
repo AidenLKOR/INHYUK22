@@ -3,11 +3,7 @@ guid: fb6da3afc430b29468741281a617be0f
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences:
-  - miniGameUI: {instanceID: 0}
-  - player: {instanceID: 0}
-  - bulletPrefab: {instanceID: 0}
-  - gameArea: {instanceID: 0}
+  defaultReferences: []
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

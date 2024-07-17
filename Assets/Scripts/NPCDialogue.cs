@@ -66,8 +66,11 @@ public class NPCDialogue : MonoBehaviour
 
     public void EndDialogue()
     {
-        Debug.Log("Ending dialogue..."); // 디버그 로그 추가
-        dialogueBox.SetActive(false); // 대화창을 숨깁니다.
+        if (dialogueBox != null)
+        {
+            Debug.Log("Ending dialogue..."); // 디버그 로그 추가
+            dialogueBox.SetActive(false); // 대화창을 숨깁니다.
+        }
         isDialogueActive = false; // 대화를 비활성화합니다.
     }
 }
