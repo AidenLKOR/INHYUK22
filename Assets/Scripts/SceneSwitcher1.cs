@@ -10,8 +10,10 @@ public class SceneSwitcher1 : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            Debug.Log("Player entered the trigger zone. Loading scene: " + sceneName);
             if (GameManager1.Instance != null)
             {
+                Debug.Log("Setting player start position to: " + playerStartPosition);
                 GameManager1.Instance.SetPlayerStartPosition(playerStartPosition);
                 SceneManager.LoadScene(sceneName);
             }
