@@ -12,16 +12,10 @@ public class InteractableObject : MonoBehaviour
     public TMP_InputField answerInputField; // 사용자의 입력을 받는 InputField
     public GameObject sceneTrigger; // 씬 트리거 오브젝트
     private bool isAnswerCorrect = false; // 정답 여부
+    public Transform playerTransform; // 주인공의 Transform
 
     void Start()
     {
-        Debug.Log("Start 메서드 호출됨");
-        Debug.Log("Message Box: " + (messageBox != null));
-        Debug.Log("Message Text: " + (messageText != null));
-        Debug.Log("Answer Input Field: " + (answerInputField != null));
-        Debug.Log("Correct Answer: " + correctAnswer);
-        Debug.Log("Next Scene Name: " + nextSceneName);
-
         HideMessage();
         if (sceneTrigger != null)
         {
@@ -31,25 +25,17 @@ public class InteractableObject : MonoBehaviour
 
     public void CheckAnswer()
     {
-        Debug.Log("CheckAnswer 메서드 호출됨");
         if (answerInputField != null)
         {
             string userAnswer = answerInputField.text.Trim();
-            Debug.Log("사용자 입력: " + userAnswer);
             if (string.Equals(userAnswer, correctAnswer, System.StringComparison.OrdinalIgnoreCase))
             {
-                Debug.Log("정답입니다.");
                 isAnswerCorrect = true;
             }
             else
             {
-                Debug.Log("틀렸습니다. 다시 시도하세요.");
                 isAnswerCorrect = false;
             }
-        }
-        else
-        {
-            Debug.LogError("answerInputField가 설정되지 않았습니다.");
         }
     }
 
@@ -57,7 +43,7 @@ public class InteractableObject : MonoBehaviour
     {
         if (isAnswerCorrect && Input.GetKeyDown(KeyCode.E))
         {
-            ShowMessage("문이 열렸습니다."); // 메시지를 전달합니다.
+            ShowMessage("문이 열렸습니다.");
             if (sceneTrigger != null)
             {
                 sceneTrigger.SetActive(true); // 씬 트리거를 활성화합니다.
@@ -72,10 +58,6 @@ public class InteractableObject : MonoBehaviour
             messageText.text = msg;
             messageBox.SetActive(true);
         }
-        else
-        {
-            Debug.LogWarning("Trying to access destroyed object in ShowMessage method.");
-        }
     }
 
     public void HideMessage()
@@ -84,5 +66,20 @@ public class InteractableObject : MonoBehaviour
         {
             messageBox.SetActive(false);
         }
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            // 주인공의 현재 위치 저장
+            GameManager1.Instance.SetPlayerStartPosition(playerTransform.position);
+            LoadNextScene(nextSceneName);
+        }
+    }
+
+    public void LoadNextScene(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
     }
 }
