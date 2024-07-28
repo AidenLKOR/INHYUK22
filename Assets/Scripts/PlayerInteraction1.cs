@@ -6,7 +6,6 @@ public class PlayerInteraction : MonoBehaviour
     private GameObject currentInteractableObject; // 현재 상호작용 중인 오브젝트
     private GameObject currentNPC; // 현재 상호작용 중인 NPC
     private bool isInteracting = false; // 상호작용 중 여부
-    private MiniGameRSP miniGameRSP;
 
     void Update()
     {
@@ -24,17 +23,6 @@ public class PlayerInteraction : MonoBehaviour
                 {
                     interactable.ShowMessage(); // 메시지를 표시합니다.
                     isInteracting = true; // 상호작용 상태를 활성화합니다.
-                }
-            }
-            if (currentInteractableObject.CompareTag("MiniGame_RSP"))
-            {
-                if (miniGameRSP == null)
-                {
-                    miniGameRSP = currentInteractableObject.GetComponent<MiniGameRSP>();
-                }
-                if (miniGameRSP != null)
-                {
-                    miniGameRSP.StartMiniGame();
                 }
             }
         }
