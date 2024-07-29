@@ -371,7 +371,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43606f67002869f40902ff0adca6881f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  message: "\uBAA8\uB2C8\uD130\uC5D0 '\uB2E4'\uB77C\uB294          \uAE00\uC528\uAC00
+  message: "\uBAA8\uB2C8\uD130\uC5D0 '\uB958'\uB77C\uB294          \uAE00\uC528\uAC00
     \uC801\uD600\uC788\uB2E4."
   messageBox: {fileID: 1390645551}
   messageText: {fileID: 130790143}
@@ -678,7 +678,7 @@ Transform:
   m_GameObject: {fileID: 80830715}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.3429003, y: 2.6928, z: -2.56}
+  m_LocalPosition: {x: 5.5, y: 2.6, z: -2.56}
   m_LocalScale: {x: 1.1857, y: 1.0928, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -714,8 +714,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a707bc2a7e38ba4e8f34777260a4e09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: '#2.HomeYard'
-  playerStartPosition: {x: -29, y: 0, z: 0}
+  sceneName: '#2-2.HomeYard'
+  playerStartPosition: {x: -29.85, y: -1.3, z: 0}
 --- !u!61 &89329057
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2771,7 +2771,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43606f67002869f40902ff0adca6881f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  message: "'\uAC77' \uC774\uB77C\uACE0 \uC801\uD78C                   \uCABD\uC9C0\uB97C
+  message: "'\uAD00' \uC774\uB77C\uACE0 \uC801\uD78C                   \uCABD\uC9C0\uB97C
     \uBC1C\uACAC\uD588\uB2E4!"
   messageBox: {fileID: 1390645551}
   messageText: {fileID: 130790143}
@@ -3404,8 +3404,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43606f67002869f40902ff0adca6881f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  message: "\uC2DD\uBB3C\uC774 \uC798 \uC790\uB77C\uAE30 \uC704\uD574\uC120 \uBB34\uC5C7\uC744
-    \uC8FC\uC5B4\uC57C\uD560\uAE4C\uC694?"
+  message: "\uAD8C\uB825\uC5D0 \uC758\uD574 \uAC15\uC81C\uB418\uB294    \uADDC\uBC94\uC744
+    \uBB34\uC5C7\uC774\uB77C \uD560\uAE4C\uC694? (1\uAE00\uC790)"
   messageBox: {fileID: 1390645551}
   messageText: {fileID: 130790143}
 --- !u!61 &692724425
@@ -7612,7 +7612,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43606f67002869f40902ff0adca6881f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  message: "                \u2191"
+  message: "\uC544\uD50C\uB54C \uC57D\uAD6D\uC5D0\uC11C \uCC98\uBC29\uBC1B\uB294
+    \uAC83\uC740? (1\uAE00\uC790)"
   messageBox: {fileID: 1390645551}
   messageText: {fileID: 130790143}
 --- !u!61 &1224084943
@@ -7936,6 +7937,7 @@ GameObject:
   - component: {fileID: 1329030302}
   - component: {fileID: 1329030301}
   - component: {fileID: 1329030300}
+  - component: {fileID: 1329030303}
   m_Layer: 0
   m_Name: mission
   m_TagString: Interactable
@@ -7952,7 +7954,7 @@ Transform:
   m_GameObject: {fileID: 1329030298}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.6229, y: 1.5228, z: -2.56}
+  m_LocalPosition: {x: 2.34, y: 0.28, z: -2.56}
   m_LocalScale: {x: 2.4140842, y: 2.1942, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7970,8 +7972,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43606f67002869f40902ff0adca6881f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  message: "\uBBF8\uC1582 : \uB2E8\uC11C\uB97C \uC870\uD569\uD558\uC5EC \uBB38\uC7A5\uC744
-    \uB9CC\uB4E4\uC5B4\uB77C!                 [  ] [  ] [  ] [  ] [  ] [  ]"
+  message: "\uBBF8\uC1582 : \uAE00\uC790\uB97C \uC644\uC131\uD558\uB77C!                
+    [  ] [  ] [  ] [  ] [  ] [  ]"
   messageBox: {fileID: 1390645551}
   messageText: {fileID: 130790143}
 --- !u!61 &1329030301
@@ -8071,6 +8073,51 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &1329030303
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1329030298}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &1339979376
 GameObject:
   m_ObjectHideFlags: 0
@@ -9199,98 +9246,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &1617979008
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1617979010}
-  - component: {fileID: 1617979009}
-  - component: {fileID: 1617979011}
-  m_Layer: 0
-  m_Name: SceneTrigger1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!61 &1617979009
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1617979008}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
---- !u!4 &1617979010
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1617979008}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.08, y: 2.21, z: 1.0307553}
-  m_LocalScale: {x: 0.8859376, y: 1.4320313, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1617979011
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1617979008}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a8c3de690d7a63446ab7daa2be7e8317, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sceneName: '#2.HomeYard'
-  playerStartPosition: {x: -29, y: 65, z: 0}
 --- !u!1 &1627309957
 GameObject:
   m_ObjectHideFlags: 0
@@ -11238,7 +11193,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43606f67002869f40902ff0adca6881f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  message: "'\uB294'"
+  message: "'\uB9AC'"
   messageBox: {fileID: 1390645551}
   messageText: {fileID: 130790143}
 --- !u!61 &2040659863
@@ -11618,7 +11573,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43606f67002869f40902ff0adca6881f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  message: "'\uB97C' \uC774\uB77C\uACE0 \uC801\uD78C                \uCABD\uC9C0\uB97C
+  message: "'\uB9C8' \uC774\uB77C\uACE0 \uC801\uD78C                \uCABD\uC9C0\uB97C
     \uBC1C\uACAC\uD588\uB2E4!"
   messageBox: {fileID: 1390645551}
   messageText: {fileID: 130790143}
@@ -11675,7 +11630,6 @@ SceneRoots:
   - {fileID: 1823111230}
   - {fileID: 80830724}
   - {fileID: 180061421}
-  - {fileID: 1617979010}
   - {fileID: 1635127809}
   - {fileID: 531763953}
   - {fileID: 1002972995}

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerInteraction : MonoBehaviour
 {
@@ -6,6 +7,24 @@ public class PlayerInteraction : MonoBehaviour
     private GameObject currentInteractableObject; // 현재 상호작용 중인 오브젝트
     private GameObject currentNPC; // 현재 상호작용 중인 NPC
     private bool isInteracting = false; // 상호작용 중 여부
+
+    void Start()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    void OnDestroy()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        // 씬이 로드될 때 객체를 다시 초기화
+        currentInteractableObject = null;
+        currentNPC = null;
+        isInteracting = false;
+    }
 
     void Update()
     {
@@ -25,6 +44,13 @@ public class PlayerInteraction : MonoBehaviour
                     isInteracting = true; // 상호작용 상태를 활성화합니다.
                 }
             }
+            else
+            {
+                // 객체가 파괴된 상태에서 접근하려고 할 때
+                Debug.LogWarning("Trying to access destroyed object in ShowMessage method.");
+                currentInteractableObject = null;
+                isInteracting = false;
+            }
         }
         else if (currentNPC != null && Input.GetKeyDown(KeyCode.E))
         {
@@ -40,6 +66,13 @@ public class PlayerInteraction : MonoBehaviour
                     npcDialogue.StartDialogue(); // 대화를 시작합니다.
                     isInteracting = true; // 상호작용 상태를 활성화합니다.
                 }
+            }
+            else
+            {
+                // 객체가 파괴된 상태에서 접근하려고 할 때
+                Debug.LogWarning("Trying to access destroyed object in ShowMessage method.");
+                currentNPC = null;
+                isInteracting = false;
             }
         }
     }
@@ -89,6 +122,15 @@ public class PlayerInteraction : MonoBehaviour
                     isInteracting = false; // 상호작용 상태를 해제합니다.
                 }
             }
+        }
+    }
+
+    public void ClearCurrentInteractableObject(GameObject interactableObject)
+    {
+        if (currentInteractableObject == interactableObject)
+        {
+            currentInteractableObject = null;
+            isInteracting = false;
         }
     }
 }

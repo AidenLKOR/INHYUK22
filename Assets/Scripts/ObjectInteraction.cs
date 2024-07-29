@@ -101,7 +101,7 @@ public class ObjectInteraction : MonoBehaviour
         if (answerInputField != null && resultText != null)
         {
             string userAnswer = answerInputField.text.Trim().ToLower(); // 사용자 입력을 소문자로 변환하여 공백 제거
-            if (userAnswer == "물위를걷는다")
+            if (userAnswer == "마약류관리법")
             {
                 resultText.text = "정답입니다!";
                 resultText.color = Color.red;

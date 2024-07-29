@@ -150,6 +150,6 @@ public class MiniGameRSP : MonoBehaviour
         // 이전 씬으로 돌아가기
         PlayerPrefs.SetFloat("PlayerPosX", -0.31f);
         PlayerPrefs.SetFloat("PlayerPosY", 32.34f);
-        SceneManager.LoadScene("#4.Cave"); // 이전 씬 이름을 입력하세요
+        SceneManager.LoadScene("#4-2.Cave"); // 이전 씬 이름을 입력하세요
     }
 }
