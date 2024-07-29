@@ -1,16 +1,20 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
 
 public class MiniGameRSP : MonoBehaviour
 {
     public GameObject miniGamePanel;
+    public Image backgroundImage; // 배경 이미지
     public Button rockButton;
     public Button paperButton;
     public Button scissorsButton;
     public TextMeshProUGUI countdownText;
     public TextMeshProUGUI resultText;
+    public Button retryButton;
+    public Button returnButton;
 
     private int playerScore = 0;
     private int computerScore = 0;
@@ -21,15 +25,19 @@ public class MiniGameRSP : MonoBehaviour
 
     void Start()
     {
-        miniGamePanel.SetActive(false);
-        rockButton.onClick.AddListener(() => OnChoiceSelected("Rock"));
-        paperButton.onClick.AddListener(() => OnChoiceSelected("Paper"));
-        scissorsButton.onClick.AddListener(() => OnChoiceSelected("Scissors"));
-    }
+        // 배경 이미지 설정
+        backgroundImage.rectTransform.SetAsFirstSibling();
 
-    public void StartMiniGame()
-    {
         miniGamePanel.SetActive(true);
+        retryButton.gameObject.SetActive(false);
+        returnButton.gameObject.SetActive(false);
+
+        rockButton.onClick.AddListener(() => OnChoiceSelected("주먹"));
+        paperButton.onClick.AddListener(() => OnChoiceSelected("보"));
+        scissorsButton.onClick.AddListener(() => OnChoiceSelected("가위"));
+        retryButton.onClick.AddListener(RestartGame);
+        returnButton.onClick.AddListener(ReturnToPreviousScene);
+
         StartCoroutine(StartRound());
     }
 
@@ -61,7 +69,7 @@ public class MiniGameRSP : MonoBehaviour
 
         computerChoice = GetComputerChoice();
         resultText.gameObject.SetActive(true);
-        resultText.text = $"Player: {playerChoice}\nComputer: {computerChoice}";
+        resultText.text = $"Player: {playerChoice}\nFriend: {computerChoice}";
 
         DetermineWinner();
 
@@ -82,38 +90,66 @@ public class MiniGameRSP : MonoBehaviour
         int rand = Random.Range(0, 3);
         switch (rand)
         {
-            case 0: return "Rock";
-            case 1: return "Paper";
-            case 2: return "Scissors";
+            case 0: return "주먹";
+            case 1: return "보";
+            case 2: return "가위";
         }
-        return "Rock";
+        return "주먹";
     }
 
     private void DetermineWinner()
     {
         if (playerChoice == computerChoice)
         {
-            resultText.text += "\nResult: Draw";
+            resultText.text += "\n결과: Draw!";
         }
-        else if ((playerChoice == "Rock" && computerChoice == "Scissors") ||
-                 (playerChoice == "Paper" && computerChoice == "Rock") ||
-                 (playerChoice == "Scissors" && computerChoice == "Paper"))
+        else if ((playerChoice == "주먹" && computerChoice == "가위") ||
+                 (playerChoice == "보" && computerChoice == "주먹") ||
+                 (playerChoice == "가위" && computerChoice == "보"))
         {
             playerScore++;
-            resultText.text += "\nResult: Player Wins";
+            resultText.text += "\n결과: You Win!";
         }
         else
         {
             computerScore++;
-            resultText.text += "\nResult: Computer Wins";
+            resultText.text += "\n결과: You Lose!";
         }
     }
 
     private void DisplayFinalResult()
     {
-        miniGamePanel.SetActive(false);
-        string finalResult = playerScore > computerScore ? "Player Wins the Game!" : "Computer Wins the Game!";
-        resultText.text = finalResult;
+        // 버튼들을 miniGamePanel 밖으로 배치하여 비활성화되지 않도록 함
+        if (playerScore > computerScore)
+        {
+            resultText.text = "승리하였습니다!";
+            returnButton.gameObject.SetActive(true);
+        }
+        else
+        {
+            resultText.text = "패배하였습니다!";
+            retryButton.gameObject.SetActive(true);
+        }
         resultText.gameObject.SetActive(true);
+    }
+
+    private void RestartGame()
+    {
+        playerScore = 0;
+        computerScore = 0;
+        round = 1;
+        miniGamePanel.SetActive(true);
+        retryButton.gameObject.SetActive(false);
+        returnButton.gameObject.SetActive(false);
+        resultText.gameObject.SetActive(false);
+        StartCoroutine(StartRound());
+    }
+
+    private void ReturnToPreviousScene()
+    {
+        // 이전 씬으로 돌아가기
+        PlayerPrefs.SetFloat("PlayerPosX", -0.31f);
+        PlayerPrefs.SetFloat("PlayerPosY", 32.34f);
+        SceneManager.LoadScene("#4.Cave"); // 이전 씬 이름을 입력하세요
     }
 }

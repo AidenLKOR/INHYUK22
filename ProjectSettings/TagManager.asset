@@ -12,7 +12,6 @@ TagManager:
   - Desk
   - Table
   - Square
-  - MiniGame_RSP
   layers:
   - Default
   - TransparentFX
