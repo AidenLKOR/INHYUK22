@@ -7,15 +7,10 @@ public class InteractableObject : MonoBehaviour
     public GameObject messageBox; // 메시지 박스
     public TextMeshProUGUI messageText; // 메시지 텍스트
 
-    private PlayerInteraction playerInteraction;
-
     void Start()
     {
         // Start 시점에 메시지 박스를 숨깁니다.
         HideMessage();
-
-        // PlayerInteraction 컴포넌트를 찾습니다.
-        playerInteraction = FindObjectOfType<PlayerInteraction>();
     }
 
     public void ShowMessage()
@@ -39,14 +34,5 @@ public class InteractableObject : MonoBehaviour
         }
     }
 
-    private void OnDestroy()
-    {
-        if (playerInteraction != null)
-        {
-            playerInteraction.ClearCurrentInteractableObject(this.gameObject);
-        }
-
-        messageBox = null;
-        messageText = null;
-    }
+    // MiniGameManager에 대한 참조 및 관련 로직은 삭제합니다.
 }
