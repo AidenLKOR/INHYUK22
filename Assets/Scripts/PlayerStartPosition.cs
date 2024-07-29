@@ -7,7 +7,13 @@ public class PlayerStartPosition : MonoBehaviour
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         if (player != null)
         {
-            player.transform.position = GameManager1.Instance.GetPlayerStartPosition();
+            Vector3 startPosition = GameManager1.Instance.GetPlayerStartPosition();
+            Debug.Log("Setting player position on start: " + startPosition);
+            player.transform.position = startPosition;
+        }
+        else
+        {
+            Debug.LogError("Player not found in the scene.");
         }
     }
 }

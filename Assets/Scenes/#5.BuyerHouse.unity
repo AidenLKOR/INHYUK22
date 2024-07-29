@@ -4940,8 +4940,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a707bc2a7e38ba4e8f34777260a4e09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: '#2.HomeYard'
-  playerStartPosition: {x: 3.73, y: 178.71, z: 0}
+  sceneName: '#2-4.HomeYard'
+  playerStartPosition: {x: 4.11, y: -22.1, z: 0}
 --- !u!61 &1259617345
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5063,6 +5063,7 @@ GameObject:
   - component: {fileID: 1351524562}
   - component: {fileID: 1351524561}
   - component: {fileID: 1351524560}
+  - component: {fileID: 1351524569}
   m_Layer: 0
   m_Name: 1-0.player_stand_0
   m_TagString: Player
@@ -5310,6 +5311,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1351524569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1351524559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09c12cf74007e03428438e7e07741cb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1384064286
 GameObject:
   m_ObjectHideFlags: 0
@@ -5344,10 +5357,10 @@ RectTransform:
   - {fileID: 1813215913}
   m_Father: {fileID: 1615875149}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -7.124756, y: -168.975}
-  m_SizeDelta: {x: -49.0735, y: -389.5332}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 15, y: -150}
+  m_SizeDelta: {x: 500, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1384064288
 MonoBehaviour:
@@ -5913,10 +5926,10 @@ RectTransform:
   - {fileID: 365503797}
   m_Father: {fileID: 1615875149}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -7.125, y: -168.97}
-  m_SizeDelta: {x: -49.073, y: -389.53}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 15, y: -150}
+  m_SizeDelta: {x: 500, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1621540348
 MonoBehaviour:

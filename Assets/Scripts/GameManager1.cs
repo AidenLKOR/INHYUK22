@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 public class GameManager1 : MonoBehaviour
 {
     public static GameManager1 Instance { get; private set; }
-    private Vector3 playerStartPosition;
+    private Vector3 playerStartPosition = Vector3.zero; // 기본값 설정
 
     void Awake()
     {
@@ -29,6 +29,7 @@ public class GameManager1 : MonoBehaviour
 
     public Vector3 GetPlayerStartPosition()
     {
+        Debug.Log("Getting player start position: " + playerStartPosition);
         return playerStartPosition;
     }
 
