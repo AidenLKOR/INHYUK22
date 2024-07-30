@@ -584,8 +584,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43606f67002869f40902ff0adca6881f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  message: "\uBBF8\uC1585 : \uC9D1\uC8FC\uC18C \uCC3E\uC544\uAC00\uAE30                          
-    1899-0893\uBC88\uC9C0"
+  message: "\uBBF8\uC1585 : \uC544\uB798 \uC8FC\uC18C\uB97C \uCC3E\uC544\uAC00\uC2DC\uC624.             
+    \uC0C1\uB2F4\uB85C 1342\uBC88\uAE38"
   messageBox: {fileID: 511505848}
   messageText: {fileID: 199007733}
 --- !u!61 &511256122

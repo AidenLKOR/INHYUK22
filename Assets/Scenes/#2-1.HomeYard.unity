@@ -890,6 +890,8 @@ MonoBehaviour:
     \uC788\uACA0\uB098?!"
   - "\uADF8\uB7FC \uC790\uB124\uB9CC \uBBFF\uACA0\uB124!         \uBD80\uD0C1\uD558\uB124!"
   - "(\uC5B4\uB514\uB860\uAC00 \uAE09\uD558\uAC8C              \uC0AC\uB77C\uC9C4\uB2E4.)"
+  characterSprite: {fileID: 778336025, guid: 5ac93d7ff4b7db14d8434b065a631d0d, type: 3}
+  nextScene: 
 --- !u!1 &48303551
 GameObject:
   m_ObjectHideFlags: 0
@@ -1008,6 +1010,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueBox: {fileID: 1371193305}
   dialogueText: {fileID: 1346204765}
+  characterImage: {fileID: 0}
 --- !u!1 &61616735
 GameObject:
   m_ObjectHideFlags: 0
@@ -48808,6 +48811,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueBox: {fileID: 1371193305}
   dialogueText: {fileID: 1346204765}
+  characterImage: {fileID: 2022139895}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
