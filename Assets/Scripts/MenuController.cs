@@ -5,14 +5,19 @@ public class MenuController : MonoBehaviour
 {
     public void StartGame()
     {
-        // °ÔÀÓ ¾À ·Îµå (¿¹: "GameScene")
+        // ê²Œì„ ì”¬ ë¡œë“œ (ì˜ˆ: "GameScene")
         SceneManager.LoadScene("#1.HomeScene");
     }
 
     public void ShowCredits()
     {
-        // Å©·¹µ÷ ¾À ·Îµå (¿¹: "CreditsScene")
+        // í¬ë ˆë”§ ì”¬ ë¡œë“œ (ì˜ˆ: "CreditsScene")
         SceneManager.LoadScene("CreditsScene");
     }
-}
 
+    public void GoBackToStartScene()
+    {
+        // StartSceneìœ¼ë¡œ ëŒì•„ê°€ê¸°
+        SceneManager.LoadScene("StartScene");
+    }
+}

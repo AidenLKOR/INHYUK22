@@ -802,7 +802,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43606f67002869f40902ff0adca6881f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  message: " <\uC8FC\uC18C>                        \uC2E0\uACE0\uB85C 1899-0893\uBC88\uAE38"
+  message: " <\uC8FC\uC18C>                        \uC2E0\uACE0\uB85C 112\uBC88\uAE38"
   messageBox: {fileID: 149639587}
   messageText: {fileID: 887743077}
 --- !u!61 &33136343
@@ -1039,7 +1039,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43606f67002869f40902ff0adca6881f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  message: " <\uC8FC\uC18C> \uC2E0\uACE0\uB85C 1899-0893\uBC88\uAE38"
+  message: " <\uC8FC\uC18C>                                    1899-0893\uBC88\uC9C0"
   messageBox: {fileID: 0}
   messageText: {fileID: 0}
 --- !u!61 &39592732
@@ -44483,7 +44483,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a707bc2a7e38ba4e8f34777260a4e09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: '#4.Cave'
+  sceneName: '#4-2.Cave'
   playerStartPosition: {x: -1.5, y: 3, z: 0}
 --- !u!61 &1980674253
 BoxCollider2D:

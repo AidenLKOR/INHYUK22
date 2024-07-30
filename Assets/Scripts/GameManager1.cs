@@ -4,7 +4,9 @@ using UnityEngine.SceneManagement;
 public class GameManager1 : MonoBehaviour
 {
     public static GameManager1 Instance { get; private set; }
-    private Vector3 playerStartPosition = Vector3.zero; // 기본값 설정
+
+    private Vector3 playerStartPosition;
+    private GameObject player;
 
     void Awake()
     {
@@ -13,7 +15,6 @@ public class GameManager1 : MonoBehaviour
             Instance = this;
             DontDestroyOnLoad(gameObject);
             SceneManager.sceneLoaded += OnSceneLoaded;
-            Debug.Log("GameManager1 initialized and sceneLoaded event added.");
         }
         else
         {
@@ -21,30 +22,30 @@ public class GameManager1 : MonoBehaviour
         }
     }
 
+    void OnDestroy()
+    {
+        if (Instance == this)
+        {
+            SceneManager.sceneLoaded -= OnSceneLoaded;
+        }
+    }
+
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        player = GameObject.FindGameObjectWithTag("Player");
+        if (player != null)
+        {
+            player.transform.position = playerStartPosition;
+        }
+    }
+
     public void SetPlayerStartPosition(Vector3 position)
     {
         playerStartPosition = position;
-        Debug.Log("Player start position set to: " + position);
     }
 
     public Vector3 GetPlayerStartPosition()
     {
-        Debug.Log("Getting player start position: " + playerStartPosition);
         return playerStartPosition;
-    }
-
-    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
-    {
-        Debug.Log("Scene loaded: " + scene.name);
-        GameObject player = GameObject.FindWithTag("Player");
-        if (player != null)
-        {
-            Debug.Log("Setting player position to: " + playerStartPosition);
-            player.transform.position = playerStartPosition;
-        }
-        else
-        {
-            Debug.LogError("Player not found in the scene: " + scene.name);
-        }
     }
 }

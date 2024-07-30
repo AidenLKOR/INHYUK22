@@ -119,7 +119,6 @@ public class MiniGameRSP : MonoBehaviour
 
     private void DisplayFinalResult()
     {
-        // 버튼들을 miniGamePanel 밖으로 배치하여 비활성화되지 않도록 함
         if (playerScore > computerScore)
         {
             resultText.text = "승리하였습니다!";
@@ -147,9 +146,8 @@ public class MiniGameRSP : MonoBehaviour
 
     private void ReturnToPreviousScene()
     {
-        // 이전 씬으로 돌아가기
-        PlayerPrefs.SetFloat("PlayerPosX", -0.31f);
-        PlayerPrefs.SetFloat("PlayerPosY", 32.34f);
-        SceneManager.LoadScene("#4-2.Cave"); // 이전 씬 이름을 입력하세요
+        // 위치를 PlayerPrefs에 저장합니다.
+        GameManager1.Instance.SetPlayerStartPosition(new Vector3(-0.35f, -3.13f, 0));
+        SceneManager.LoadScene("#4-2.Cave");
     }
 }
