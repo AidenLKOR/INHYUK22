@@ -39,9 +39,12 @@ EditorBuildSettings:
     path: Assets/Scenes/#5.BuyerHouse.unity
     guid: 0f8e4dad5f6277140bf2924762b160c5
   - enabled: 1
-    path: Assets/Scenes/#6.PoilceHouse.unity
+    path: Assets/Scenes/#6.PoliceHouse.unity
     guid: 8227b1e41ab5c964388581686f686d52
   - enabled: 1
     path: Assets/Scenes/#7.MiniGame_RSP.unity
     guid: 076d761d0c455e6489ec49e147f880bd
+  - enabled: 1
+    path: Assets/Scenes/#8.black-out.unity
+    guid: d7a1b43b5732f914a8e7e0298149e1a0
   m_configObjects: {}

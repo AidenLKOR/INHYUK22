@@ -223,8 +223,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43606f67002869f40902ff0adca6881f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  message: "\uC774\uC0C1\uD55C \uB0C4\uC0C8\uAC00                        \uB098\uB294
-    \uAC83 \uAC19\uB2E4.."
+  message: "\uC774\uC0C1\uD55C \uB0C4\uC0C8\uAC00 \uB098\uB294 \uAC83 \uAC19\uB2E4.."
   messageBox: {fileID: 1390645551}
   messageText: {fileID: 130790143}
 --- !u!61 &73395686
@@ -371,8 +370,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43606f67002869f40902ff0adca6881f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  message: "\uBAA8\uB2C8\uD130\uC5D0 '\uB958'\uB77C\uB294                   \uAE00\uC790\uAC00
-    \uC801\uD600\uC788\uB2E4."
+  message: "\uBAA8\uB2C8\uD130\uC5D0 '\uB958'\uB77C\uB294 \uAE00\uC790\uAC00 \uC801\uD600\uC788\uB2E4."
   messageBox: {fileID: 1390645551}
   messageText: {fileID: 130790143}
 --- !u!61 &75405289
@@ -1752,7 +1750,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43606f67002869f40902ff0adca6881f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  message: "\uCC45\uAF42\uC774\uC5D4 \uC5F0\uAD6C \uB17C\uBB38\uC774         \uAC00\uB4DD\uD558\uB2E4."
+  message: "\uCC45\uAF42\uC774\uC5D4 \uC5F0\uAD6C \uB17C\uBB38\uC774 \uAC00\uB4DD\uD558\uB2E4."
   messageBox: {fileID: 1390645551}
   messageText: {fileID: 130790143}
 --- !u!61 &345778103
@@ -2784,8 +2782,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43606f67002869f40902ff0adca6881f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  message: "'\uAD00' \uC774\uB77C\uACE0 \uC801\uD78C                   \uCABD\uC9C0\uB97C
-    \uBC1C\uACAC\uD588\uB2E4!"
+  message: "'\uAD00' \uC774\uB77C\uACE0 \uC801\uD78C \uCABD\uC9C0\uB97C \uBC1C\uACAC\uD588\uB2E4!"
   messageBox: {fileID: 1390645551}
   messageText: {fileID: 130790143}
 --- !u!61 &455002756
@@ -3417,7 +3414,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43606f67002869f40902ff0adca6881f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  message: "\uAD8C\uB825\uC5D0 \uC758\uD574 \uAC15\uC81C\uB418\uB294 \uADDC\uBC94\uC744         
+  message: "\uAD8C\uB825\uC5D0 \uC758\uD574 \uAC15\uC81C\uB418\uB294 \uADDC\uBC94\uC744
     \uBB34\uC5C7\uC774\uB77C \uD560\uAE4C\uC694? (1\uAE00\uC790)"
   messageBox: {fileID: 1390645551}
   messageText: {fileID: 130790143}
@@ -3843,8 +3840,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43606f67002869f40902ff0adca6881f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  message: "\uC544\uB798\uCABD\uC5D0\uB3C4 \uBB54\uAC00                     \uB354
-    \uC788\uB294 \uAC83 \uAC19\uB2E4."
+  message: "\uC544\uB798\uCABD\uC5D0\uB3C4 \uBB54\uAC00 \uB354 \uC788\uB294 \uAC83
+    \uAC19\uB2E4."
   messageBox: {fileID: 1390645551}
   messageText: {fileID: 130790143}
 --- !u!61 &806867822
@@ -6964,8 +6961,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43606f67002869f40902ff0adca6881f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  message: "\uBB34\uC5B8\uAC00\uB97C \uC5F0\uAD6C\uD558\uACE0                    
-    \uC788\uB294 \uAC83 \uAC19\uB2E4."
+  message: "\uBB34\uC5B8\uAC00\uB97C \uC5F0\uAD6C\uD558\uACE0 \uC788\uB294 \uAC83
+    \uAC19\uB2E4."
   messageBox: {fileID: 1390645551}
   messageText: {fileID: 130790143}
 --- !u!61 &884412142
@@ -7348,7 +7345,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43606f67002869f40902ff0adca6881f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  message: "\uCEF4\uD4E8\uD130 \uD654\uBA74\uC744 \uC790\uC138\uD788        \uC0B4\uD3B4\uBCF4\uC790."
+  message: "\uCEF4\uD4E8\uD130 \uD654\uBA74\uC744 \uC790\uC138\uD788 \uC0B4\uD3B4\uBCF4\uC790."
   messageBox: {fileID: 1390645551}
   messageText: {fileID: 130790143}
 --- !u!61 &1065141049
@@ -7625,7 +7622,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43606f67002869f40902ff0adca6881f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  message: "\uC544\uD50C\uB54C \uC57D\uAD6D\uC5D0\uC11C                   \uCC98\uBC29\uBC1B\uB294
+  message: "\uC544\uD50C\uB54C \uC57D\uAD6D\uC5D0\uC11C \uCC98\uBC29\uBC1B\uB294
     \uAC83\uC740? (1\uAE00\uC790)"
   messageBox: {fileID: 1390645551}
   messageText: {fileID: 130790143}
@@ -7985,8 +7982,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43606f67002869f40902ff0adca6881f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  message: "\uBBF8\uC1582 : \uAE00\uC790\uB97C \uC644\uC131\uD558\uB77C!                
-    [  ] [  ] [  ] [  ] [  ] [  ]"
+  message: "\uBBF8\uC1582 : 6\uAC1C\uC758 \uAE00\uC790\uB97C \uCC3E\uC544 \uB2E8\uC5B4\uB97C
+    \uC644\uC131\uD558\uB77C!"
   messageBox: {fileID: 1390645551}
   messageText: {fileID: 130790143}
 --- !u!61 &1329030301
@@ -10439,8 +10436,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43606f67002869f40902ff0adca6881f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  message: "\u2605\uAE5C\uC9DD\uD034\uC988\u2605                                            
-    Q\uD0A4\uB97C \uB204\uB974\uC138\uC694."
+  message: "\u2605\uAE5C\uC9DD\uD034\uC988\u2605 Q\uD0A4\uB97C \uB204\uB974\uC138\uC694."
   messageBox: {fileID: 1390645551}
   messageText: {fileID: 130790143}
 --- !u!61 &1842079697
@@ -11353,8 +11349,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43606f67002869f40902ff0adca6881f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  message: "\uC54C \uC218 \uC5C6\uB294 \uC554\uD638\uAC00                    \uC788\uB294
-    \uAC83 \uAC19\uB2E4."
+  message: "\uC54C \uC218 \uC5C6\uB294 \uC554\uD638\uAC00 \uC788\uB294 \uAC83 \uAC19\uB2E4."
   messageBox: {fileID: 1390645551}
   messageText: {fileID: 130790143}
 --- !u!61 &2052649991
@@ -11586,8 +11581,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43606f67002869f40902ff0adca6881f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  message: "'\uB9C8' \uC774\uB77C\uACE0 \uC801\uD78C                \uCABD\uC9C0\uB97C
-    \uBC1C\uACAC\uD588\uB2E4!"
+  message: "'\uB9C8' \uC774\uB77C\uACE0 \uC801\uD78C \uCABD\uC9C0\uB97C \uBC1C\uACAC\uD588\uB2E4!"
   messageBox: {fileID: 1390645551}
   messageText: {fileID: 130790143}
 --- !u!61 &2103884084

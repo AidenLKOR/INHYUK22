@@ -915,8 +915,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43606f67002869f40902ff0adca6881f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  message: "\uCC98\uC74C \uBCF4\uB294 \uC2DD\uBB3C\uC778\uB370...       \uBB34\uC2A8
-    \uC2DD\uBB3C\uC77C\uAE4C?"
+  message: "\uCC98\uC74C \uBCF4\uB294 \uC2DD\uBB3C\uC778\uB370...\uBB34\uC2A8 \uC2DD\uBB3C\uC77C\uAE4C?"
   messageBox: {fileID: 708753190}
   messageText: {fileID: 517985693}
 --- !u!61 &311836132
@@ -1141,13 +1140,14 @@ MonoBehaviour:
   - x
   - "\uC544 \uCC38 \uADF8\uAC83 \uB4E4\uC5C8\uB2C8?"
   - x
-  - "\uC606\uC9D1\uC5D0 \uC774\uC0C1\uD55C \uC0AC\uB78C\uC774       \uC774\uC0AC\uC654\uB2E4\uACE0
+  - "\uC606\uC9D1\uC5D0 \uC774\uC0C1\uD55C \uC0AC\uB78C\uC774 \uC774\uC0AC\uC654\uB2E4\uACE0
     \uD558\uB124?"
   - x
-  - "\uD56D\uC0C1 \uC120\uAE00\uB77C\uC2A4\uB9CC \uC4F0\uACE0       \uB2E4\uB2CC\uB2E4\uB098..?"
+  - "\uD56D\uC0C1 \uC120\uAE00\uB77C\uC2A4\uB9CC \uC4F0\uACE0 \uB2E4\uB2CC\uB2E4\uB098..?"
   - x
-  - "\uC544\uBB34\uD2BC \uC774\uC0C1\uD55C \uC0AC\uB78C            \uBCF4\uC774\uBA74
-    \uC870\uC2EC\uD574\uC57C \uD55C\uB2E4~"
+  - "\uC544\uBB34\uD2BC \uC774\uC0C1\uD55C \uC0AC\uB78C \uBCF4\uC774\uBA74 \uC870\uC2EC\uD574\uC57C
+    \uD55C\uB2E4~"
+  dialogueDelay: 0.1
 --- !u!50 &437878586
 Rigidbody2D:
   serializedVersion: 4
@@ -1720,7 +1720,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43606f67002869f40902ff0adca6881f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  message: "\uCC45\uAF42\uC774\uC5D0\uB294 \uD544\uB77C\uB378\uD53C\uC544    \uC5EC\uD589
+  message: "\uCC45\uAF42\uC774\uC5D0\uB294 \uD544\uB77C\uB378\uD53C\uC544 \uC5EC\uD589
     \uC7A1\uC9C0\uAC00 \uC788\uB2E4."
   messageBox: {fileID: 708753190}
   messageText: {fileID: 517985693}
@@ -5412,6 +5412,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startSceneMusic: {fileID: 8300000, guid: 2c7ba9ceaec493749adfbfb4d0956cd9, type: 3}
   homeSceneMusic: {fileID: 8300000, guid: c6b2a006836534d45a62190564c4ded7, type: 3}
+  miniGameMusic: {fileID: 0}
 --- !u!4 &1580319397
 Transform:
   m_ObjectHideFlags: 0

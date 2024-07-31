@@ -931,8 +931,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43606f67002869f40902ff0adca6881f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  message: "  <\uC6B0\uB9AC\uC9D1 \uC8FC\uC18C>                       \uC608\uBC29\uB85C
-    420\uBC88\uAE38"
+  message: "<\uC6B0\uB9AC\uC9D1 \uC8FC\uC18C> \uC608\uBC29\uB85C 420\uBC88\uAE38"
   messageBox: {fileID: 725681064}
   messageText: {fileID: 507043376}
 --- !u!61 &59044203
@@ -8224,8 +8223,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43606f67002869f40902ff0adca6881f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  message: "\u203B\uAD00\uACC4\uC790 \uC678 \uCD9C\uC785\uAE08\uC9C0\u203B                       
-    \uC5F0\uAD6C\uC2E4"
+  message: "<\uC5F0\uAD6C\uC2E4> \u203B\uAD00\uACC4\uC790 \uC678 \uCD9C\uC785\uAE08\uC9C0\u203B"
   messageBox: {fileID: 725681064}
   messageText: {fileID: 507043376}
 --- !u!61 &420311042
@@ -20613,6 +20611,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueBox: {fileID: 274795760}
   dialogueText: {fileID: 1159600708}
+  dialogueDelay: 0.1
 --- !u!114 &1135194071
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44225,6 +44224,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueBox: {fileID: 274795760}
   dialogueText: {fileID: 1159600708}
+  dialogueDelay: 0.1
 --- !u!4 &1928533261
 Transform:
   m_ObjectHideFlags: 0

@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using System.Collections;
 using System.Collections.Generic;
 
 public class DialogueManager2 : MonoBehaviour
@@ -8,6 +9,7 @@ public class DialogueManager2 : MonoBehaviour
 
     public GameObject dialogueBox;
     public TMP_Text dialogueText;
+    public float dialogueDelay = 0.1f; // 대사 표시 딜레이 추가
 
     private Queue<string> dialogueLines;
 
@@ -51,7 +53,17 @@ public class DialogueManager2 : MonoBehaviour
         }
 
         string line = dialogueLines.Dequeue();
-        dialogueText.text = line;
+        StartCoroutine(TypeLine(line)); // 대사 표시 코루틴 호출
+    }
+
+    IEnumerator TypeLine(string line)
+    {
+        dialogueText.text = "";
+        foreach (char letter in line.ToCharArray())
+        {
+            dialogueText.text += letter;
+            yield return new WaitForSeconds(dialogueDelay);
+        }
     }
 
     public void EndDialogue()

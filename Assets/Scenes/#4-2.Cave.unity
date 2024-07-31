@@ -457,13 +457,14 @@ MonoBehaviour:
   dialogueLines:
   - "\uD06D..\uBD84\uD558\uB2E4..!"
   - x
-  - "\uC88B\uC544..\uADF8\uB798\uB3C4 \uC57D\uC18D\uC740                \uC57D\uC18D\uC774\uB2C8
+  - "\uC88B\uC544..\uADF8\uB798\uB3C4 \uC57D\uC18D\uC740 \uC57D\uC18D\uC774\uB2C8
     \uC9C0\uD0A4\uACA0\uB2E4."
   - x
   - "(\uBB3C\uAC74\uC744 \uB3CC\uB824\uC900\uB2E4.)"
   - x
-  - "\uD558\uC9C0\uB9CC \uBA85\uC2EC\uD558\uB77C\uACE0!                 \uC808\uB300
-    \uB4E4\uD0A4\uBA74 \uC548\uB3FC!"
+  - "\uD558\uC9C0\uB9CC \uBA85\uC2EC\uD558\uB77C\uACE0! \uC808\uB300 \uB4E4\uD0A4\uBA74
+    \uC548\uB3FC!"
+  dialogueDelay: 0.1
 --- !u!95 &509015414
 Animator:
   serializedVersion: 5
@@ -584,7 +585,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43606f67002869f40902ff0adca6881f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  message: "\uBBF8\uC1585 : \uC544\uB798 \uC8FC\uC18C\uB97C \uCC3E\uC544\uAC00\uC2DC\uC624.             
+  message: "\uBBF8\uC1585 : \uC544\uB798 \uC8FC\uC18C\uB97C \uCC3E\uC544\uAC00\uC2DC\uC624.
     \uC0C1\uB2F4\uB85C 1342\uBC88\uAE38"
   messageBox: {fileID: 511505848}
   messageText: {fileID: 199007733}

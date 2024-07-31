@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using System.Collections;
 
 public class NPCDialogue : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class NPCDialogue : MonoBehaviour
     public string[] dialogueLines; // 대사 내용
     private int currentLine = 0; // 현재 대사 라인
     private bool isDialogueActive = false; // 대화 활성화 여부
+    public float dialogueDelay = 0.1f; // 대사 표시 딜레이
 
     void Start()
     {
@@ -29,7 +31,7 @@ public class NPCDialogue : MonoBehaviour
             Debug.Log("Starting dialogue..."); // 디버그 로그 추가
             dialogueBox.SetActive(true); // 대화창을 활성화합니다.
             currentLine = 0;
-            ShowLine(currentLine); // 첫 번째 대사를 표시합니다.
+            StartCoroutine(DisplayLine(currentLine)); // 첫 번째 대사를 표시합니다.
             isDialogueActive = true; // 대화를 활성화합니다.
         }
         else
@@ -43,7 +45,7 @@ public class NPCDialogue : MonoBehaviour
         currentLine++;
         if (currentLine < dialogueLines.Length)
         {
-            ShowLine(currentLine); // 다음 대사를 표시합니다.
+            StartCoroutine(DisplayLine(currentLine)); // 다음 대사를 표시합니다.
         }
         else
         {
@@ -51,11 +53,16 @@ public class NPCDialogue : MonoBehaviour
         }
     }
 
-    public void ShowLine(int lineIndex)
+    IEnumerator DisplayLine(int lineIndex)
     {
         if (lineIndex >= 0 && lineIndex < dialogueLines.Length)
         {
-            dialogueText.text = dialogueLines[lineIndex];
+            dialogueText.text = string.Empty;
+            foreach (char letter in dialogueLines[lineIndex].ToCharArray())
+            {
+                dialogueText.text += letter;
+                yield return new WaitForSeconds(dialogueDelay); // 대사 표시 딜레이
+            }
             Debug.Log("Displaying line: " + dialogueLines[lineIndex]); // 디버그 로그 추가
         }
         else

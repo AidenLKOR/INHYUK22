@@ -802,7 +802,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43606f67002869f40902ff0adca6881f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  message: " <\uC8FC\uC18C>                        \uC2E0\uACE0\uB85C 112\uBC88\uAE38"
+  message: "<\uC8FC\uC18C> \uC2E0\uACE0\uB85C 112\uBC88\uAE38"
   messageBox: {fileID: 149639587}
   messageText: {fileID: 887743077}
 --- !u!61 &33136343
@@ -1039,7 +1039,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43606f67002869f40902ff0adca6881f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  message: " <\uC8FC\uC18C> \uC0C1\uB2F4\uB85C 1342\uBC88\uAE38"
+  message: "<\uC8FC\uC18C> \uC0C1\uB2F4\uB85C 1342\uBC88\uAE38"
   messageBox: {fileID: 0}
   messageText: {fileID: 0}
 --- !u!61 &39592732
@@ -2920,6 +2920,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueBox: {fileID: 918206074}
   dialogueText: {fileID: 937591997}
+  dialogueDelay: 0.1
 --- !u!114 &156001678
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4327,6 +4328,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueBox: {fileID: 918206074}
   dialogueText: {fileID: 937591997}
+  dialogueDelay: 0.1
 --- !u!4 &215101274
 Transform:
   m_ObjectHideFlags: 0
@@ -14726,8 +14728,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43606f67002869f40902ff0adca6881f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  message: "  <\uC6B0\uB9AC\uC9D1 \uC8FC\uC18C>                       \uC608\uBC29\uB85C
-    420\uBC88\uAE38"
+  message: "<\uC6B0\uB9AC\uC9D1 \uC8FC\uC18C> \uC608\uBC29\uB85C 420\uBC88\uAE38"
   messageBox: {fileID: 149639587}
   messageText: {fileID: 887743077}
 --- !u!61 &890353013
@@ -22013,8 +22014,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43606f67002869f40902ff0adca6881f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  message: "\u203B\uAD00\uACC4\uC790 \uC678 \uCD9C\uC785\uAE08\uC9C0\u203B                       
-    \uC5F0\uAD6C\uC2E4"
+  message: "<\uC5F0\uAD6C\uC2E4> \u203B\uAD00\uACC4\uC790 \uC678 \uCD9C\uC785\uAE08\uC9C0\u203B"
   messageBox: {fileID: 149639587}
   messageText: {fileID: 887743077}
 --- !u!61 &1337393234
