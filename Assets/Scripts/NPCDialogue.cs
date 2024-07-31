@@ -10,6 +10,7 @@ public class NPCDialogue : MonoBehaviour
     private int currentLine = 0; // 현재 대사 라인
     private bool isDialogueActive = false; // 대화 활성화 여부
     public float dialogueDelay = 0.1f; // 대사 표시 딜레이
+    private Coroutine currentTypingCoroutine; // 현재 타이핑 코루틴을 추적하는 변수
 
     void Start()
     {
@@ -31,7 +32,7 @@ public class NPCDialogue : MonoBehaviour
             Debug.Log("Starting dialogue..."); // 디버그 로그 추가
             dialogueBox.SetActive(true); // 대화창을 활성화합니다.
             currentLine = 0;
-            StartCoroutine(DisplayLine(currentLine)); // 첫 번째 대사를 표시합니다.
+            ShowNextLine(); // 첫 번째 대사를 표시합니다.
             isDialogueActive = true; // 대화를 활성화합니다.
         }
         else
@@ -42,10 +43,15 @@ public class NPCDialogue : MonoBehaviour
 
     public void ShowNextLine()
     {
-        currentLine++;
+        if (currentTypingCoroutine != null)
+        {
+            StopCoroutine(currentTypingCoroutine); // 현재 진행 중인 타이핑 코루틴을 중지합니다.
+        }
+
         if (currentLine < dialogueLines.Length)
         {
-            StartCoroutine(DisplayLine(currentLine)); // 다음 대사를 표시합니다.
+            currentTypingCoroutine = StartCoroutine(DisplayLine(currentLine)); // 다음 대사를 표시합니다.
+            currentLine++;
         }
         else
         {
@@ -73,6 +79,11 @@ public class NPCDialogue : MonoBehaviour
 
     public void EndDialogue()
     {
+        if (currentTypingCoroutine != null)
+        {
+            StopCoroutine(currentTypingCoroutine); // 대화가 끝날 때 현재 타이핑 코루틴을 중지합니다.
+        }
+
         if (dialogueBox != null)
         {
             Debug.Log("Ending dialogue..."); // 디버그 로그 추가

@@ -464,7 +464,7 @@ MonoBehaviour:
   - x
   - "\uD558\uC9C0\uB9CC \uBA85\uC2EC\uD558\uB77C\uACE0! \uC808\uB300 \uB4E4\uD0A4\uBA74
     \uC548\uB3FC!"
-  dialogueDelay: 0.1
+  dialogueDelay: 0.05
 --- !u!95 &509015414
 Animator:
   serializedVersion: 5

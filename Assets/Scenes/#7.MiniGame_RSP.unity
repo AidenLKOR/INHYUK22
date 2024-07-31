@@ -1140,6 +1140,7 @@ MonoBehaviour:
   startSceneMusic: {fileID: 8300000, guid: 2c7ba9ceaec493749adfbfb4d0956cd9, type: 3}
   homeSceneMusic: {fileID: 8300000, guid: c6b2a006836534d45a62190564c4ded7, type: 3}
   miniGameMusic: {fileID: 8300000, guid: 2c7ba9ceaec493749adfbfb4d0956cd9, type: 3}
+  homeYardMusic: {fileID: 8300000, guid: a801194daedf53243ba9bfd8341c5095, type: 3}
 --- !u!4 &1179296560
 Transform:
   m_ObjectHideFlags: 0

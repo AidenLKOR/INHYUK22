@@ -9,9 +9,10 @@ public class DialogueManager2 : MonoBehaviour
 
     public GameObject dialogueBox;
     public TMP_Text dialogueText;
-    public float dialogueDelay = 0.1f; // 대사 표시 딜레이 추가
+    public float dialogueDelay = 0.02f; // 대사 표시 딜레이 추가
 
     private Queue<string> dialogueLines;
+    private Coroutine currentTypingCoroutine;
 
     void Awake()
     {
@@ -46,6 +47,11 @@ public class DialogueManager2 : MonoBehaviour
 
     public void DisplayNextLine()
     {
+        if (currentTypingCoroutine != null)
+        {
+            StopCoroutine(currentTypingCoroutine);
+        }
+
         if (dialogueLines.Count == 0)
         {
             EndDialogue();
@@ -53,7 +59,7 @@ public class DialogueManager2 : MonoBehaviour
         }
 
         string line = dialogueLines.Dequeue();
-        StartCoroutine(TypeLine(line)); // 대사 표시 코루틴 호출
+        currentTypingCoroutine = StartCoroutine(TypeLine(line)); // 대사 표시 코루틴 호출
     }
 
     IEnumerator TypeLine(string line)
@@ -68,6 +74,11 @@ public class DialogueManager2 : MonoBehaviour
 
     public void EndDialogue()
     {
+        if (currentTypingCoroutine != null)
+        {
+            StopCoroutine(currentTypingCoroutine);
+        }
+
         dialogueBox.SetActive(false);
     }
 

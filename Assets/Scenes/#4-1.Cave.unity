@@ -2885,7 +2885,7 @@ MonoBehaviour:
   - x
   - "\uD06C\uD06C..\uAC8C\uC784\uC744 \uC6D0\uD55C\uB2E4\uBA74 \uBC11\uC73C\uB85C
     \uAC00\uBD10"
-  dialogueDelay: 0.1
+  dialogueDelay: 0.05
 --- !u!95 &988084400
 Animator:
   serializedVersion: 5

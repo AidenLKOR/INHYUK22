@@ -670,7 +670,7 @@ MonoBehaviour:
   - "\uC624\uB298\uAC19\uC740 \uC77C\uC740 \uC55E\uC73C\uB85C \uC5C6\uC744\uAC70\uC57C."
   - x
   - "\uC598\uAE30\uAC00 \uAE38\uC5C8\uAD70. \uC774\uC81C \uAC00\uBCF4\uB77C\uACE0."
-  dialogueDelay: 0.1
+  dialogueDelay: 0.05
 --- !u!61 &261530769
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6857,7 +6857,7 @@ Transform:
   m_GameObject: {fileID: 981336932}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.24, y: -4.8440003, z: 0}
+  m_LocalPosition: {x: 7.23, y: -4.83, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9741,7 +9741,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: '#2-5.HomeYard'
-  playerStartPosition: {x: -117.35, y: -0.89, z: 0}
+  playerStartPosition: {x: 30.66, y: 21.33, z: 0}
 --- !u!61 &1924043262
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -9796,8 +9796,8 @@ Transform:
   m_GameObject: {fileID: 1924043260}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.26, y: -4.09, z: 0.9497469}
-  m_LocalScale: {x: 0.61498827, y: 0.6208652, z: 1}
+  m_LocalPosition: {x: 24, y: -30.3, z: 0.9497469}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}

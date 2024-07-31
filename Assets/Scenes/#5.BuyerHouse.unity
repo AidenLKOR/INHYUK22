@@ -3758,7 +3758,7 @@ MonoBehaviour:
   - "\uBCFC\uC77C \uB2E4 \uBD24\uC73C\uBA74 \uC774\uC81C \uB098\uAC00!"
   - x
   - "\uC5B4\uCC28\uD53C \uB610 \uBCF4\uACA0\uC9C0\uB9CC..\uD06C\uD06C\uD06C..."
-  dialogueDelay: 0.1
+  dialogueDelay: 0.05
 --- !u!1 &602924353
 GameObject:
   m_ObjectHideFlags: 0

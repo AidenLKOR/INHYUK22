@@ -11,6 +11,7 @@ public class SelfDialogueManager : MonoBehaviour
     public string[] dialogueLines;
     private int currentLineIndex = 0;
     public float dialogueDelay = 0.1f;
+    private Coroutine currentTypingCoroutine; // 현재 타이핑 코루틴을 추적하는 변수
 
     void Start()
     {
@@ -27,14 +28,14 @@ public class SelfDialogueManager : MonoBehaviour
         }
 
         selfDialogueBox.SetActive(true);
-        StartCoroutine(DisplayLine());
+        ShowNextLine(); // 첫 번째 대사를 표시합니다.
     }
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            DisplayNextLine();
+            ShowNextLine();
         }
     }
 
@@ -48,12 +49,17 @@ public class SelfDialogueManager : MonoBehaviour
         }
     }
 
-    void DisplayNextLine()
+    void ShowNextLine()
     {
-        if (currentLineIndex < dialogueLines.Length - 1)
+        if (currentTypingCoroutine != null)
         {
+            StopCoroutine(currentTypingCoroutine); // 현재 진행 중인 타이핑 코루틴을 중지합니다.
+        }
+
+        if (currentLineIndex < dialogueLines.Length)
+        {
+            currentTypingCoroutine = StartCoroutine(DisplayLine());
             currentLineIndex++;
-            StartCoroutine(DisplayLine());
         }
         else
         {
@@ -63,6 +69,11 @@ public class SelfDialogueManager : MonoBehaviour
 
     void EndDialogue()
     {
+        if (currentTypingCoroutine != null)
+        {
+            StopCoroutine(currentTypingCoroutine); // 대화가 끝날 때 현재 타이핑 코루틴을 중지합니다.
+        }
+
         selfDialogueBox.SetActive(false);
         StartCoroutine(ChangeScene());
     }

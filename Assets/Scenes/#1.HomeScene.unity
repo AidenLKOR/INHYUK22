@@ -1147,7 +1147,7 @@ MonoBehaviour:
   - x
   - "\uC544\uBB34\uD2BC \uC774\uC0C1\uD55C \uC0AC\uB78C \uBCF4\uC774\uBA74 \uC870\uC2EC\uD574\uC57C
     \uD55C\uB2E4~"
-  dialogueDelay: 0.1
+  dialogueDelay: 0.05
 --- !u!50 &437878586
 Rigidbody2D:
   serializedVersion: 4

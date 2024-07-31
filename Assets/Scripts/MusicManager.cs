@@ -7,6 +7,7 @@ public class MusicManager : MonoBehaviour
     public AudioClip startSceneMusic;
     public AudioClip homeSceneMusic;
     public AudioClip miniGameMusic; // MiniGame 씬에서 재생될 음악
+    public AudioClip homeYardMusic; // #2-5.HomeYard 씬에서 재생될 음악
 
     private AudioSource audioSource;
 
@@ -38,6 +39,10 @@ public class MusicManager : MonoBehaviour
         else if (scene.name == "#7.MiniGame_RSP")
         {
             PlayMusic(miniGameMusic);
+        }
+        else if (scene.name == "#2-5.HomeYard")
+        {
+            PlayMusic(homeYardMusic);
         }
         else
         {

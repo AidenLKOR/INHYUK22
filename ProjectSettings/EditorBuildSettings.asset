@@ -27,6 +27,9 @@ EditorBuildSettings:
     path: Assets/Scenes/#2-4.HomeYard.unity
     guid: c74dc9cf1475ad44cb239f282c2ba6e1
   - enabled: 1
+    path: Assets/Scenes/#2-5.HomeYard.unity
+    guid: d7e2d5e6ac95a3d4e9a35e0f6c564cfd
+  - enabled: 1
     path: Assets/Scenes/#3.DrugSellerHouse.unity
     guid: 51dbe238ef3e0244085ae16d39fb5ae5
   - enabled: 1
@@ -47,4 +50,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/#8.black-out.unity
     guid: d7a1b43b5732f914a8e7e0298149e1a0
+  - enabled: 1
+    path: Assets/Scenes/#9.EndingScene.unity
+    guid: 88c42db76c94318439c60490d60b6260
   m_configObjects: {}
