@@ -12,6 +12,13 @@ TagManager:
   - Desk
   - Table
   - Square
+  - NPC_red
+  - NPC_orange
+  - NPC_yellow
+  - NPC_green
+  - NPC_blue
+  - NPC_navy
+  - NPC_purple
   layers:
   - Default
   - TransparentFX

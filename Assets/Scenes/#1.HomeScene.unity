@@ -1136,7 +1136,7 @@ MonoBehaviour:
   - x
   - "\uC77C\uC5B4\uB0AC\uB2C8?"
   - x
-  - "\uBC25 \uBA39\uACE0 \uD559\uAD50 \uAC00\uC57C\uC9C0"
+  - "\uC5B4\uC11C \uD559\uAD50 \uAC00\uC57C\uC9C0"
   - x
   - "\uC544 \uCC38 \uADF8\uAC83 \uB4E4\uC5C8\uB2C8?"
   - x
@@ -1146,7 +1146,7 @@ MonoBehaviour:
   - "\uD56D\uC0C1 \uC120\uAE00\uB77C\uC2A4\uB9CC \uC4F0\uACE0 \uB2E4\uB2CC\uB2E4\uB098..?"
   - x
   - "\uC544\uBB34\uD2BC \uC774\uC0C1\uD55C \uC0AC\uB78C \uBCF4\uC774\uBA74 \uC870\uC2EC\uD574\uC57C
-    \uD55C\uB2E4~"
+    \uD55C\uB2E4."
   dialogueDelay: 0.05
 --- !u!50 &437878586
 Rigidbody2D:
@@ -5413,6 +5413,7 @@ MonoBehaviour:
   startSceneMusic: {fileID: 8300000, guid: 2c7ba9ceaec493749adfbfb4d0956cd9, type: 3}
   homeSceneMusic: {fileID: 8300000, guid: c6b2a006836534d45a62190564c4ded7, type: 3}
   miniGameMusic: {fileID: 0}
+  homeYardMusic: {fileID: 0}
 --- !u!4 &1580319397
 Transform:
   m_ObjectHideFlags: 0

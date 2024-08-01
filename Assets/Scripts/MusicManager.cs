@@ -8,6 +8,7 @@ public class MusicManager : MonoBehaviour
     public AudioClip homeSceneMusic;
     public AudioClip miniGameMusic; // MiniGame 씬에서 재생될 음악
     public AudioClip homeYardMusic; // #2-5.HomeYard 씬에서 재생될 음악
+    public AudioClip endingSceneMusic; // EndingScene 씬에서 재생될 음악
 
     private AudioSource audioSource;
 
@@ -43,6 +44,10 @@ public class MusicManager : MonoBehaviour
         else if (scene.name == "#2-5.HomeYard")
         {
             PlayMusic(homeYardMusic);
+        }
+        else if (scene.name == "EndingScene")
+        {
+            PlayMusic(endingSceneMusic);
         }
         else
         {

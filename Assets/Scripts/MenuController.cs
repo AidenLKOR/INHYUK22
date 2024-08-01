@@ -5,7 +5,7 @@ public class MenuController : MonoBehaviour
 {
     public void StartGame()
     {
-        // 게임 씬 로드 (예: "GameScene")
+        // 게임 씬 로드 (예: "#1.HomeScene")
         SceneManager.LoadScene("#1.HomeScene");
     }
 
@@ -19,5 +19,12 @@ public class MenuController : MonoBehaviour
     {
         // StartScene으로 돌아가기
         SceneManager.LoadScene("StartScene");
+    }
+
+    public void QuitGame()
+    {
+        // 게임 종료
+        Debug.Log("Game is exiting");
+        Application.Quit();
     }
 }

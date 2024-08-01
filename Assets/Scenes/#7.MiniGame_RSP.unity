@@ -1141,6 +1141,7 @@ MonoBehaviour:
   homeSceneMusic: {fileID: 8300000, guid: c6b2a006836534d45a62190564c4ded7, type: 3}
   miniGameMusic: {fileID: 8300000, guid: 2c7ba9ceaec493749adfbfb4d0956cd9, type: 3}
   homeYardMusic: {fileID: 8300000, guid: a801194daedf53243ba9bfd8341c5095, type: 3}
+  endingSceneMusic: {fileID: 0}
 --- !u!4 &1179296560
 Transform:
   m_ObjectHideFlags: 0
@@ -1321,6 +1322,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 655374312}
   - {fileID: 1661156611}
   - {fileID: 1777988877}
   - {fileID: 690613322}
@@ -1328,7 +1330,6 @@ RectTransform:
   - {fileID: 345995531}
   - {fileID: 1440255051}
   - {fileID: 59409382}
-  - {fileID: 655374312}
   - {fileID: 2051594471}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1496,7 +1497,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.990566, g: 0.990566, b: 0.990566, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
