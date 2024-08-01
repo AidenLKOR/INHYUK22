@@ -19,6 +19,7 @@ TagManager:
   - NPC_blue
   - NPC_navy
   - NPC_purple
+  - study
   layers:
   - Default
   - TransparentFX

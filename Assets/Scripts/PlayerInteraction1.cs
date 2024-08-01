@@ -31,6 +31,7 @@ public class PlayerInteraction : MonoBehaviour
         if (currentInteractableObject != null && Input.GetKeyDown(KeyCode.E))
         {
             InteractableObject interactable = currentInteractableObject.GetComponent<InteractableObject>();
+            UrlManager urlManager = currentInteractableObject.GetComponent<UrlManager>();
             if (interactable != null)
             {
                 if (isInteracting)
@@ -41,6 +42,19 @@ public class PlayerInteraction : MonoBehaviour
                 else
                 {
                     interactable.ShowMessage(); // 메시지를 표시합니다.
+                    isInteracting = true; // 상호작용 상태를 활성화합니다.
+                }
+            }
+            else if (urlManager != null)
+            {
+                if (isInteracting)
+                {
+                    urlManager.HideMessage(); // 메시지를 숨깁니다.
+                    isInteracting = false; // 상호작용 상태를 해제합니다.
+                }
+                else
+                {
+                    urlManager.ShowMessage(); // 메시지를 표시합니다.
                     isInteracting = true; // 상호작용 상태를 활성화합니다.
                 }
             }
@@ -79,7 +93,7 @@ public class PlayerInteraction : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Interactable"))
+        if (collision.CompareTag("Interactable") || collision.CompareTag("study1") || collision.CompareTag("study2"))
         {
             currentInteractableObject = collision.gameObject; // 현재 상호작용 중인 오브젝트를 설정합니다.
         }
@@ -91,7 +105,7 @@ public class PlayerInteraction : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.CompareTag("Interactable"))
+        if (collision.CompareTag("Interactable") || collision.CompareTag("study1") || collision.CompareTag("study2"))
         {
             if (currentInteractableObject == collision.gameObject)
             {
@@ -99,9 +113,14 @@ public class PlayerInteraction : MonoBehaviour
                 if (isInteracting)
                 {
                     InteractableObject interactable = collision.GetComponent<InteractableObject>();
+                    UrlManager urlManager = collision.GetComponent<UrlManager>();
                     if (interactable != null)
                     {
                         interactable.HideMessage(); // 메시지를 숨깁니다.
+                    }
+                    else if (urlManager != null)
+                    {
+                        urlManager.HideMessage(); // 메시지를 숨깁니다.
                     }
                     isInteracting = false; // 상호작용 상태를 해제합니다.
                 }
