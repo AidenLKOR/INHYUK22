@@ -93,7 +93,7 @@ public class PlayerInteraction : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Interactable") || collision.CompareTag("study1") || collision.CompareTag("study2"))
+        if (collision.CompareTag("Interactable") || collision.CompareTag("study"))
         {
             currentInteractableObject = collision.gameObject; // 현재 상호작용 중인 오브젝트를 설정합니다.
         }
@@ -105,7 +105,7 @@ public class PlayerInteraction : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.CompareTag("Interactable") || collision.CompareTag("study1") || collision.CompareTag("study2"))
+        if (collision.CompareTag("Interactable") || collision.CompareTag("study"))
         {
             if (currentInteractableObject == collision.gameObject)
             {

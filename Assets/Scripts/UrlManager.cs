@@ -13,7 +13,7 @@ public class UrlManager : MonoBehaviour
     // 각 태그에 해당하는 URL을 저장할 Dictionary
     private Dictionary<string, string> urlDict = new Dictionary<string, string>()
     {
-        { "study", "https://www.christiantoday.co.kr/news/362747#" }
+        { "study", "https://sites.google.com/gge.goe.go.kr/drugoutnevertry/%ED%99%88" }
         // 여기 추가적으로 태그와 URL을 추가할 수 있습니다.
     };
 
