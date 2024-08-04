@@ -4069,7 +4069,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.6404748, y: 0.7123797}
+  m_Size: {x: 0.9, y: 0.8}
   m_EdgeRadius: 0
 --- !u!50 &514868713
 Rigidbody2D:
@@ -4215,7 +4215,7 @@ MonoBehaviour:
   - "\uB124\uAC00 \uC5EC\uAE30\uC11C \uBA40\uCA61\uD788 \uB3CC\uC544\uAC00\uB294
     \uAC83\uB9CC\uC73C\uB85C\uB3C4 \uAC10\uC0AC\uD788 \uC0DD\uAC01\uD558\uB77C\uACE0..\uD06C\uD06C..."
   - x
-  - "(\uAC81\uC5D0 \uC9C8\uB9B0\uCC44 \uC774\uACF3\uC744 \uBE60\uC838\uB098\uAC04\uB2E4.)"
+  - "(\uAC81\uC5D0 \uC9C8\uB9B0\uCC44 \uC5BC\uB978 \uC774\uACF3\uC744 \uBE60\uC838\uB098\uAC04\uB2E4.)"
   dialogueDelay: 0.05
 --- !u!1 &602924353
 GameObject:
