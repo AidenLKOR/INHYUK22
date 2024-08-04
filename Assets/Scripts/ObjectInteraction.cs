@@ -21,12 +21,12 @@ public class ObjectInteraction : MonoBehaviour
     // 질문과 정답을 저장할 Dictionary
     private Dictionary<string, (string question, string answer)> questionAnswerDict = new Dictionary<string, (string, string)>()
     {
-        { "Desk", ("정답은 무엇일까요? (6글자)", "마약류관리법") },
+        { "Desk", ("정답은 무엇일까요? (6글자)", "마약중독예방") },
         { "NPC_red", ("인체의 중추신경을 자극하여 과도한 흥분, 억제 효과를 가져오는 유해한 약물을 무엇이라고 할까요?", "마약") },
-        { "NPC_orange", ("약물을 계속 사용하면서 스스로 중단할 수 없는 상태를 무엇이라고 할까요?", "약물중독") },
-        { "NPC_yellow", ("약물을 중단했을 때, 삶의 의욕이 없어지고, 경련, 불안을 느끼는 증상을 무엇이라고 할까요?", "금단증상") },
+        { "NPC_orange", ("약물을 계속 사용하면서 스스로 중단할 수 없는 상태를 무엇이라고 할까요? (약물OO)", "약물중독") },
+        { "NPC_yellow", ("약물을 중단했을 때, 삶의 의욕이 없어지고, 경련, 불안을 느끼는 증상을 무엇이라고 할까요? (OO증상)", "금단증상") },
         { "NPC_green", ("모르는 사람이 주는 음식은 함부로 먹어도 될까요? (네/아니오)", "아니오") },
-        { "NPC_blue", ("마약은 마약을 사용하는 본인에게만 피해를 줄까요? (네/아니오)", "아니오") },
+        { "NPC_blue", ("마약을 하지 않고, 전달만 하는 사람도 처벌을 받을까요? (네/아니오)", "네") },
         { "NPC_navy", ("마약범죄 신고 번호는 무엇일까요?", "112") },
         { "NPC_purple", ("24시간 마약중독 상담센터 번호는 무엇일까요?", "1342") }
     };
@@ -119,7 +119,7 @@ public class ObjectInteraction : MonoBehaviour
             string userAnswer = answerInputField.text.Trim().ToLower(); // 사용자 입력을 소문자로 변환하여 공백 제거
             if (userAnswer == questionAnswerDict[currentInteractionObject.tag].answer.ToLower())
             {
-                resultText.text = "정답입니다!";
+                resultText.text = "정답입니다! 연구실을 나오세요.";
                 resultText.color = Color.red;
                 resultText.gameObject.SetActive(true);
                 Debug.Log("정답입니다!"); // 디버그 메시지 추가

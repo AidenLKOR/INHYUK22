@@ -456,15 +456,19 @@ MonoBehaviour:
   dialogueBox: {fileID: 1906373957}
   dialogueText: {fileID: 1398258104}
   dialogueLines:
-  - "\uD06D..\uBD84\uD558\uB2E4..!"
+  - "\uCCC7..\uBD84\uD558\uB2E4..!"
   - x
   - "\uC88B\uC544..\uADF8\uB798\uB3C4 \uC57D\uC18D\uC740 \uC57D\uC18D\uC774\uB2C8
     \uC9C0\uD0A4\uACA0\uB2E4."
   - x
   - "(\uBB3C\uAC74\uC744 \uB3CC\uB824\uC900\uB2E4.)"
   - x
-  - "\uD558\uC9C0\uB9CC \uBA85\uC2EC\uD558\uB77C\uACE0! \uC808\uB300 \uB4E4\uD0A4\uBA74
-    \uC548\uB3FC!"
+  - "\uBB50? \uB0B4\uAC00 \uC774\uC0C1\uD574 \uBCF4\uC778\uB2E4\uACE0?"
+  - x
+  - "\uB108\uB3C4 \uACE7 \uB098\uCC98\uB7FC \uB420 \uAC78? \uD06C\uD06C\uD06C.. \uBCFC
+    \uC77C \uB2E4 \uBD24\uC73C\uBA74 \uC5BC\uB978 \uB098\uAC00!"
+  - x
+  - "(\uC54C \uC218 \uC5C6\uB294 \uB9D0\uC744 \uD558\uACE0 \uB3CC\uC544\uC120\uB2E4.)"
   dialogueDelay: 0.05
 --- !u!95 &509015414
 Animator:
@@ -548,7 +552,7 @@ Transform:
   m_GameObject: {fileID: 509015409}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.9999302, z: -0, w: -0.01181695}
-  m_LocalPosition: {x: -2.26, y: -3.13, z: 0.06}
+  m_LocalPosition: {x: -3.96, y: -3.41, z: 0.06}
   m_LocalScale: {x: 0.86869043, y: 0.8551176, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4417,7 +4421,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 4
-  m_Sprite: {fileID: 21300000, guid: e93ebaf8c50ec224e926e3aca3f33a83, type: 3}
+  m_Sprite: {fileID: 21300000, guid: dc49db6dd7fdb0240a7d6af14565899a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
